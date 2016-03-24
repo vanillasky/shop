@@ -25,7 +25,7 @@
 
 
 
-/** ìš©ìˆ˜ ìŠ¤í™ */
+/** ¿ë¼ö ½ºÆå */
 .dp_spec {  width:540px; border:1px solid #667788;}
 .dp_spec tr td { text-align:center;  border-top:1px solid #667788; border-left:1px solid #667788; font-family:Verdana, Geneva, sans-serif; font-size:12px;} 
 .theader_subject { background-color:#eeddaa;height:30px; font-weight:bold; font-size:12px; }
@@ -47,11 +47,11 @@
 .img70 { max-width:70%;max-height:70%;}
 .img80 { max-width:80%;max-height:80%;}
 
-/* ì œí’ˆ ìƒì„¸ì •ë³´ */
+/* Á¦Ç° »ó¼¼Á¤º¸ */
 .brandBaner { width:900px; margin:0 auto;}
 .clearBoth { clear:both; }
 .prodBase { margin:.5em auto; clear:both; text-align:center; padding:0;}
-.prodBase h1 {  font-size:1.5em; font-weight:bold; text-align:center; font-family:Tahoma, ë‹ì›€, Geneva, sans-serif; }
+.prodBase h1 {  font-size:1.5em; font-weight:bold; text-align:center; font-family:Tahoma, µ¸¿ò, Geneva, sans-serif; }
 
 .prodInfoWrapper { margin:0 0 0 1em; width:47%; float:left;}
 .prodInfoWrapper-full { margin:0 0 0 1em; width:95%;}
@@ -73,7 +73,7 @@
    padding-left:1.2em;
 }
 
-.prodInfo { font-family:Verdana, ë‹ì›€, Geneva, sans-serif; margin-top:-2px;}
+.prodInfo { font-family:Verdana, µ¸¿ò, Geneva, sans-serif; margin-top:-2px;}
 .prodInfo p { margin:0;}
 .prodInfo p.heading { background-color:#EFE3C6; font-weight:bold; font-size:1.2em; color:#195005; padding:10px 10px 10px 15px; }
 
@@ -89,10 +89,10 @@
 .box ol li { padding:0.1em 0; list-style: none; font-size:0.9em; }
 
 
-.listSubject { margin:1em 0 0 1em; padding: 5px 0 0 0; font-weight:bold; font-family:Verdana, ë‹ì›€, Geneva, sans-serif;}
+.listSubject { margin:1em 0 0 1em; padding: 5px 0 0 0; font-weight:bold; font-family:Verdana, µ¸¿ò, Geneva, sans-serif;}
 
-li.d { list-style:disc inside none; font-family:Verdana, Geneva, sans-serif,ë‹ì›€, dotum ; font-size:1em; padding: 3px 0 3px 0;}
-li.no-deco { list-style:none outside none; font-family:Verdana, Geneva, sans-serif,ë‹ì›€, dotum; font-size:1em; margin-left:0; padding: 3px 0 3px 0;}
+li.d { list-style:disc inside none; font-family:Verdana, Geneva, sans-serif,µ¸¿ò, dotum ; font-size:1em; padding: 3px 0 3px 0;}
+li.no-deco { list-style:none outside none; font-family:Verdana, Geneva, sans-serif,µ¸¿ò, dotum; font-size:1em; margin-left:0; padding: 3px 0 3px 0;}
 
 .indent1EM { margin:0 0 0 1em; }
 .center80 { margin:0 auto; width:80%;}
@@ -111,8 +111,8 @@ li.no-deco { list-style:none outside none; font-family:Verdana, Geneva, sans-ser
 .category_top .blend_left{position:absolute;top:0;left:0}
 .category_top .blend_right{position:absolute;top:0;right:0}
 .category_top_box {position:absolute;bottom:-1px;left:30px;z-index:500;color:#fff;background:#666;background:url(/images/category-top-box-bg.png);background:rgba(102,102,102,.86);width:50%;margin-bottom:2em}
-.category_top_box h1{margin-bottom:.1em;font-weight:normal; font-family:Verdana, Geneva, sans-serif,ë‹ì›€, dotum ;}
-.category_top_box p { font-family:Verdana, Geneva, sans-serif,ë‹ì›€, dotum ;}
+.category_top_box h1{margin-bottom:.1em;font-weight:normal; font-family:Verdana, Geneva, sans-serif,µ¸¿ò, dotum ;}
+.category_top_box p { font-family:Verdana, Geneva, sans-serif,µ¸¿ò, dotum ;}
 .inset { width:100%; padding:15px; clear:both; }
 
 .prod_img { margin:5px auto; }
@@ -148,7 +148,7 @@ ul.sort_list li a span.on {
 	
 }
 
-ul.sort_list li a { text-decoration:none; font-family:Formatta,Arial, dotum, ë‹ì›€; font-size:12px; font-weight:normal; color:#691414; }
+ul.sort_list li a { text-decoration:none; font-family:Formatta,Arial, dotum, µ¸¿ò; font-size:12px; font-weight:normal; color:#691414; }
 ul.sort_list li a:hover { text-decoration:none;}
 
 /* SNS Share buttons on product detail view page*/
@@ -159,29 +159,30 @@ ul.sort_list li a:hover { text-decoration:none;}
 .share-buttons #sb_pinterest { background:url(/shop/data/images/web/icon/pinterest_32.png) no-repeat; height:32px; width:32px; cursor:pointer; margin-left:5px; display:inline-block;}
 .share-buttons #sb_reddit { background:url(/shop/data/images/web/icon/reddit_32.png) no-repeat; height:32px; width:32px; cursor:pointer; margin-left:5px; display:inline-block;}
 .share-buttons #sns_count { margin-left:3px; width:100px; padding:0; display:inline-block; *display:inline; }
-/* ì¥ë°”êµ¬ë‹ˆ, ìœ„ì‹œë¦¬ìŠ¤íŠ¸ ë²„íŠ¼(ìƒí’ˆ ìƒì„¸í™”ë©´ìš©) */
+/* Àå¹Ù±¸´Ï, À§½Ã¸®½ºÆ® ¹öÆ°(»óÇ° »ó¼¼È­¸é¿ë) */
 .shop_buttons { width:98%; margin-left:3px; margin-bottom:3px; }
-/* í’ˆì ˆìƒí’ˆ ì¬ì…ê³  ì•ˆë‚´ë¬¸êµ¬ì™€ ë²„íŠ¼*/
+/* Ç°Àı»óÇ° ÀçÀÔ°í ¾È³»¹®±¸¿Í ¹öÆ°*/
 .backorder_txt { width:100%; font-weight:bold; margin-bottom: 7px}
 
-/* ê²€ìƒ‰ê²°ê³¼ í˜ì´ì§€ */
+/* °Ë»ö°á°ú ÆäÀÌÁö */
 .search_page_title { margin:5px 16px 5px 16px; padding:5px; border:1px solid #dddddd; }
-.search_for { font-size:18px; font-weight:bold; font-family:Formatta,Arial, dotum, ë‹ì›€; }
+.search_for { font-size:18px; font-weight:bold; font-family:Formatta,Arial, dotum, µ¸¿ò; }
 .search_word {margin-left:5px; color:#999999; font-size:18px; font-weight:bold;}
 .search_bar { margin:5px 16px 5px 16px; padding:5px 0 0 0; width:98%; text-align:center }
 .popular_keywords { text-align:left; padding-left:200px; }
 
 .goods_new_ribon { position:relavtive; left:0 top:0 }
+.goods-circle-icon { absolute:relavtive; right:0 top:0}
 .goods_list_table tr:first-child td {border-top:1px solid #cccccc;}
 .goods_list_table tr td {padding-top:5px; border-left:0px; border-right:1px solid #cccccc; border-bottom:1px solid #cccccc}
 .goods_list_table tr td:last-child {border-right:0px}
 
-.goods_dp_tag { position:relative; left:0; top:0; width:100%; }
+.goods_dp_tag { position:relative; left:0; top:0; width:100%;}
 .dp_tag { position:absolute; left:0; top:0; }
+.dp_tag-right { position:absolute; right:5px; top:-5px; }
 
 #goods-grid { 
 	border-collapse: collapse;
-	
 }
 
 #goods-grid tr td {
@@ -189,7 +190,7 @@ ul.sort_list li a:hover { text-decoration:none;}
 	border-right:1px solid #c1c1c1;
 	border-bottom:1px solid #c1c1c1;
 	
-	padding-top:0;
+	padding-top:10px;
 	padding-bottom:10px;
 	height:200px;
 }
@@ -197,7 +198,7 @@ ul.sort_list li a:hover { text-decoration:none;}
 .dot-line  {
   border-style:dotted;
   border:none;
-	border-bottom:1px dotted #000;
+  border-bottom:1px dotted #000;
   width:100%;
   margin-top:10px;
 }

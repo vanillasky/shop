@@ -15,7 +15,7 @@
 <!-- 이동레이어 팝업창 시작 -->
 <div id="{'blnCookie_' + .code}" STYLE="position:absolute; width:{.width}px; height:{.height}px; left:{.left}px; top:{.top}px; z-index:200;">
 	<div onmousedown="Start_move(event,'{'blnCookie_' + .code}');" onmouseup="Moveing_stop();" style='cursor:move;'>
-		<table border="0" cellspacing="0" cellpadding="0">
+		<table>
 			<tr>
 				<td> 
 					<!--{ = eval("\$_GET[code]='blnCookie_" + .code + "';") }--> 
@@ -30,7 +30,7 @@
 
 <!--{ / }--> 
 
-<script language="JavaScript"><!--
+<script type="text/JavaScript"><!--
 <!--{ @ dataPopup() }-->
 <!--{ ? .type == '' }-->
 if ( !getCookie( "blnCookie_{.code}" ) ) { // {.name} 팝업호출
@@ -130,51 +130,22 @@ if(win) win.focus();
 		ier = new ierotator(config);
 		var banner_navi = new bannerController(ier);
 		
-		//document.getElementById("main_top_banner").style.height = "auto";
-		//document.getElementById("main_top_banner").style.maxHeight = "408px";
-		//alert(document.getElementById("main_top_banner").style.height);
-		//alert(document.getElementById("main_top_banner").style.width);
-		
 		</script> 
 		
 </div>
-			
-			<!--
-			<div><a href="/shop/goods/goods_view.php?goodsno=242&category=017002"><img class="main-banner"  src="http://francosmith.godohosting.com/main/festool.jpg"></a></div>
-			<div><a href="/shop/goods/goods_view.php?goodsno=324&category=033005"><img class="main-banner"  src="http://francosmith.godohosting.com/main/kreg.jpg"></a></div>
-			<div><a href="#"><img class="main-banner"  src="http://francosmith.godohosting.com/main/sorby.jpg"></a></div>
-			<div><a href="/shop/goods/goods_view.php?goodsno=211&category=033003"><img class="main-banner"  src="http://francosmith.godohosting.com/main/d4rpro.jpg"></a></div>
-			-->
-			<!--<div><img src="/shop/data/images/web/lie-nielsen_741.jpg"></div>
-			<div><img src="/shop/data/images/web/micro_jig_741.jpg"></div>
-			<div><img src="/shop/data/images/web/fiskars_741.jpg"></div>-->
-		
-			
-		
-	<!--</div>-->
-	<!--
-	<div id="top_right_banner">
-		<div class="h288" >
-			<img src="../img/banner/b246/festool_dp_sale.jpg">
-		</div>
-		<div style="position:relative;top:3px;">
-			<img src="../img/banner/b246/woodturning_workshop.jpg">
-		</div>
-	</div>
-	-->
-</div>
+	
 
 <div id="main_contents" style="width:{_cfg['shopSize']}px">
-	
 	<div id="three_banner">
-		<span><!--{ @ dataBanner( 11 ) }-->{.tag}<!--{ / }--></span>
-		<span><!--{ @ dataBanner( 12 ) }-->{.tag}<!--{ / }--></span>
-		<span><!--{ @ dataBanner( 13 ) }-->{.tag}<!--{ / }--></span>
+		<div><!--{ @ dataBanner( 11 ) }-->{.tag}<!--{ / }--></div>
+		<div><!--{ @ dataBanner( 12 ) }-->{.tag}<!--{ / }--></div>
+		<div><!--{ @ dataBanner( 13 ) }-->{.tag}<!--{ / }--></div>
 	</div>
-	
 	<div id="best_item">
-		<div class="title"><a href="../goods/goods_grp_01.php"><img src="/shop/data/images/web/main/bestsellers.jpg"></a></div>
-		<div class="more_link"><a href="../goods/goods_grp_01.php"><img src="../img/main/icon_more.gif"></a></div>
+		<div class="title-block">
+			<div class="title"><a href="../goods/goods_grp_01.php"><h2><span style="color:#C9242B">BEST</span> SELLERS</h2></a></div>
+			<div class="more_link"><a href="../goods/goods_grp_01.php"><img src="../img/main/icon_more.gif"></a></div>
+		</div>
 		<div class="contents">
 		<!--{ ? _cfg_step[0].chk  }--> 
 		<!--{ = this->assign( 'loop', dataDisplayGoods( 0, _cfg_step[0].img, _cfg_step[0].page_num ) ) // 데이타 호출 }--> 
@@ -186,22 +157,6 @@ if(win) win.focus();
 		<!--{ / }--> 
 		</div>
 	</div>
-	
-	<div id="new_arrival">
-		<div class="title"><a href="../goods/goods_grp_04.php"><img src="/shop/data/images/web/main/new_arrival.jpg"></a></div>
-		<div class="more_link"><a href="../goods/goods_grp_04.php"><img src="../img/main/icon_more.gif"></a></div>
-		<div class="contents" style="border:none;">
-		<!--{ ? _cfg_step[3].chk  }--> 
-		<!--{ = this->assign( 'loop', dataDisplayGoods( 3, _cfg_step[3].img, _cfg_step[3].page_num ) ) // 데이타 호출 }--> 
-		<!--{ = this->assign( 'cols', _cfg_step[3].cols ) // 행당 컬럼수 }--> 
-		<!--{ = this->assign( 'size', _cfg[_cfg_step[3].img] ) // 이미지 사이즈 }--> 
-		<!--{ = this->assign( 'id', "main_list_04" ) // 고유 ID }--> 
-		<!--{ = this->assign( 'dpCfg', _cfg_step[3] ) // 설정 }--> 
-		<!--{ = include_file( "goods/list/" + _cfg_step[3].tpl + ".htm" ) }--> 
-		<!--{ / }--> 
-		</div>
-	</div>
-	
 	
 </div>
 
