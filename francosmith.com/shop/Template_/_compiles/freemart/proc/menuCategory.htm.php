@@ -1,0 +1,444 @@
+<?php /* Template_ 2.2.7 2016/05/16 21:41:47 /www/francotr3287_godo_co_kr/shop/data/skin/freemart/proc/menuCategory.htm 000019705 */ ?>
+<div id="top_cate_wrapper" class="top_red">
+	<div id="top_cate" style="width:<?php echo $GLOBALS["cfg"]['shopSize']?>px;">
+		<ul class="top_cate_ul">
+			<li class="menu-container icon">
+				<p class="lv1"><a href="#">Brands</a></p>
+				<div class="dropdown" style="width:<?php echo $GLOBALS["cfg"]['shopSize']?>px;">
+				<?php echo $this->define('tpl_include_file_1','proc/main/brand_list.htm')?> <?php $this->print_("tpl_include_file_1",$TPL_SCP,1);?>
+
+				</div>
+			</li>
+			
+			<li class="menu-container">
+				<p class="lv1"><a href="#">수공구</a></p>
+				<div class="dropdown" style="width:<?php echo $GLOBALS["cfg"]['shopSize']?>px;">
+					<!-- layers for each side of menu area -->
+					<!--<div class="dd_baners"></div>-->
+					<!--<div class="dd_baners_right"></div>-->
+					
+					<div class="menu_lv2">	
+						<p><a href="/shop/goods/goods_list.php?&category=027011"><span class="mlink boldf">목선반/우든펜</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="/shop/goods/goods_list.php?&category=027011001"><span class="mlink">Bowl/Spindle</span></a></li>
+									<li><a href="/shop/goods/goods_list.php?&category=027011002"><span class="mlink">Parting Tools</span></a></li>			
+									<li><a href="/shop/goods/goods_list.php?&category=027011005"><span class="mlink">Hollowing Tools</span></a></li>			
+									<li><a href="/shop/goods/goods_list.php?&category=027011003"><span class="mlink">터닝툴세트</span></a></li>			
+									<li><a href="/shop/goods/goods_list.php?&category=027011004 "><span class="mlink">측정/악세서리</span></a></li>			
+								</ul>
+							</div>
+						</p>
+					</div>	
+				
+				
+					<div class="menu_lv2" >
+						<p><a href="/shop/goods/goods_list.php?&category=027027"><span class="mlink boldf">끌(Chisels)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="/shop/goods/goods_list.php?&category=027027001"><span class="mlink">평끌</span></a></li>
+									<li><a href="/shop/goods/goods_list.php?&category=027027002"><span class="mlink">성형끌</span></a></li>			
+									<li><a href="/shop/goods/goods_list.php?&category=027027003"><span class="mlink">끌세트</span></a></li>
+									<li><a href="/shop/goods/goods_list.php?&category=027027004"><span class="mlink">끌집/악세서리</span></a></li>
+												
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					<div class="menu_lv2">	
+						<p><a href="/shop/goods/goods_list.php?&category=027015"><span class="mlink boldf">조각(Carving)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="/shop/goods/goods_list.php?&category=027015003"><span class="mlink">카빙 끌</span></a></li>
+									<li><a href="/shop/goods/goods_list.php?&category=027015004"><span class="mlink">카빙 가우지</span></a></li>			
+									<li><a href="/shop/goods/goods_list.php?&category=027015005"><span class="mlink">카빙 나이프</span></a></li>			
+									<li><a href="/shop/goods/goods_list.php?&category=027015006"><span class="mlink">카빙 말렛</span></a></li>			
+									<li><a href="/shop/goods/goods_list.php?&category=027015007"><span class="mlink">카빙툴 세트</span></a></li>
+									<li><a href="/shop/goods/goods_list.php?&category=027015002"><span class="mlink">카빙 악세서리</span></a></li>
+									 
+												
+								</ul>
+							</div>
+						</p>
+					</div>	
+				
+					<div class="menu_lv2">	
+						<p><a href="/shop/goods/goods_list.php?&category=027024"><span class="mlink boldf">대패/스크래핑</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="/shop/goods/goods_list.php?&category=027024001"><span class="mlink">평대패</span></a></li>
+									<li><a href="/shop/goods/goods_list.php?&category=027024005"><span class="mlink">소형대패</span></a></li>
+									<li><a href="/shop/goods/goods_list.php?&category=027024006"><span class="mlink">몰딩/기타 대패</span></a></li>
+									<li><a href="/shop/goods/goods_list.php?&category=027024003"><span class="mlink">드로우나이프</span></a></li>
+									<li><a href="/shop/goods/goods_list.php?&category=027024002"><span class="mlink">스크래퍼/구두칼</span></a></li>		
+									<li><a href="/shop/goods/goods_list.php?&category=027024004"><span class="mlink">줄(RASP/FILE)</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">줄&nbsp;&amp;&nbsp;Rasp</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">철공용줄</span></a></li>
+									<li><a href="#"><span class="mlink">목공용줄</span></a></li>			
+									<li><a href="#"><span class="mlink">톱/체인톱줄</span></a></li>			
+									<li><a href="#"><span class="mlink">줄세트</span></a></li>			
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+			
+					<div class="dd_bottom">
+						
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<p class="lv1"><a href="#">공방용품</a></p>
+				<div class="dropdown" style="width:<?php echo $GLOBALS["cfg"]['shopSize']?>px;">
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">줄&nbsp;&amp;&nbsp;Rasp</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">철공용줄</span></a></li>
+									<li><a href="#"><span class="mlink">목공용줄</span></a></li>			
+									<li><a href="#"><span class="mlink">톱/체인톱줄</span></a></li>			
+									<li><a href="#"><span class="mlink">줄세트</span></a></li>			
+								</ul>
+							</div>
+						</p>
+					</div>	
+			</li>
+			<li>
+				<p class="lv1"><a href="#">전동공구</a></p>
+			</li>
+			
+			<li>
+				<p class="lv1"><a href="#">전동공구 악세서리</a></p>
+			</li>
+			<li>
+				<p class="lv1"><a href="#">마감제/소모품</a></p>
+			</li>
+			
+			
+			<li>
+				<p class="lv1"><a href="#">하드웨어/가구장식</a></p>
+			</li>
+			<li>
+				<p class="lv1"><a href="#">목재</a></p>
+								<div class="dropdown" style="width:<?php echo $GLOBALS["cfg"]['shopSize']?>px;">
+					<!-- layers for each side of menu area -->
+					<!--<div class="dd_baners"></div>-->
+					<!--<div class="dd_baners_right"></div>-->
+					
+					<div class="menu_lv2" >
+						<p><a href="#"><span class="mlink boldf">끌(Chisels)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">평끌</span></a></li>
+									<li><a href="#"><span class="mlink">성형끌</span></a></li>			
+									<li><a href="#"><span class="mlink">페일(pfeil)</span></a></li>
+									<li><a href="#"><span class="mlink">MHG</span></a></li>			
+									<li><a href="#"><span class="mlink">나렉스</span></a></li>			
+									<li><a href="#"><span class="mlink">철마</span></a></li>			
+									<li><a href="#"><span class="mlink">탑맨</span></a></li>			
+									<li><a href="#"><span class="mlink">끌세트</span></a></li>			
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">조각(Carving)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">카빙 끌</span></a></li>
+									<li><a href="#"><span class="mlink">카빙 가우지</span></a></li>			
+									<li><a href="#"><span class="mlink">카빙 나이프</span></a></li>			
+									<li><a href="#"><span class="mlink">카빙 말렛</span></a></li>			
+									<li><a href="#"><span class="mlink">카빙툴 세트</span></a></li>			
+								</ul>
+							</div>
+						</p>
+					</div>	
+				
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">대패&nbsp;&amp;&nbsp;스크래퍼</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">평대패</span></a></li>
+									<li><a href="#"><span class="mlink">소형대패</span></a></li>			
+									<li><a href="#"><span class="mlink">턱대패/홈대패</span></a></li>			
+									<li><a href="#"><span class="mlink">남경대패</span></a></li>
+									<li><a href="#"><span class="mlink">특수대패/기타</span></a></li>
+									<li><a href="#"><span class="mlink">스크래핑</span></a></li>		
+									<li><a href="#"><span class="mlink">드로우나이프</span></a></li>		
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">줄&nbsp;&amp;&nbsp;Rasp</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">철공용줄</span></a></li>
+									<li><a href="#"><span class="mlink">목공용줄</span></a></li>			
+									<li><a href="#"><span class="mlink">톱/체인톱줄</span></a></li>			
+									<li><a href="#"><span class="mlink">줄세트</span></a></li>			
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+					
+					<div class="menu_lv2">	
+						<p><a href="#"><span class="mlink boldf">톱(Hand Saws)</span></a>
+							<div class="menu_lv3">
+								<ul>
+									<li><a href="#"><span class="mlink">등대기톱</span></a></li>
+									<li><a href="#"><span class="mlink">양날톱</span></a></li>			
+									<li><a href="#"><span class="mlink">세공용톱</span></a></li>			
+									<li><a href="#"><span class="mlink">플러그쏘(다보톱)</span></a></li>			
+									<li><a href="#"><span class="mlink">실톱(Coping Saw)</span></a></li>			
+									<li><a href="#"><span class="mlink">전정/전지톱</span></a></li>			
+									<li><a href="#"><span class="mlink">쥐꼬리톱/기타</span></a></li>
+								</ul>
+							</div>
+						</p>
+					</div>	
+			
+					<div class="dd_bottom">
+						
+					</div>
+				</div>
+			</li>
+			<li class="special">
+				<p class="lv1"><a href="#">Sale&amp;Specials</a></p>
+			</li>
+			
+		</ul>
+	</div>	
+</div>
+<script>
+	bindTopMenu();
+</script>
