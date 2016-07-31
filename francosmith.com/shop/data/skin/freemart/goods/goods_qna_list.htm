@@ -3,6 +3,11 @@
 <head>
 <script src="../common.js"></script>
 <link rel="styleSheet" href="../style.css">
+<link rel="styleSheet" href="../prod.css">
+<link rel="styleSheet" href="../button.css">
+<link rel="styleSheet" href="../font.css" />	
+
+
 <script id="qna_chk"></script>
 <script type="text/javascript">
 function dynamicScript(url) {
@@ -73,35 +78,42 @@ function resizeFrame()
 <body style="margin-top:10px" onload="setTimeout('resizeFrame()',1)">
 
 <div id="contents-wrapper">
-	<table border=0 cellpadding=0 cellspacing=0 style="width:100%">
-	<tr>
-		<td class="spec_line_title">Q&amp;A</td>
-	</tr>
-</table>
-<!--{ @ _loop }-->
-<div>
-<table width="100%" cellpadding="0" cellspacing="0" style="border-bottom-style:solid;border-bottom-color:#E6E6E6;border-bottom-width:1;cursor:pointer;">
-<tr height="25" onmouseover="this.style.background='#F7F7F7'" onmouseout="this.style.background=''" onclick="view_content('{.sno}');">
-	<td width="50" align="center">{.idx}</td>
-	<!--{ ? .type == 'Q' }-->
-	<td style="padding-left:0px"><div style="background-image: url(../img/common/ico_q.gif); background-repeat:no-repeat;background-position:left 3px;padding:3px 0px 0px 20px;">{.subject}<!--{ ? .secretIcon }-->&nbsp;<img src="../img/common/icn_secret.gif" align=absmiddle><!--{ / }--></div></td>
-	<!--{ : }-->
-	<td style="padding-left:5px"><div style="background-image: url(../img/common/ico_a.gif); background-repeat:no-repeat;background-position:left 3px;padding:3px 0px 0px 27px;"> {.subject}<!--{ ? .secretIcon }-->&nbsp;<img src="../img/common/icn_secret.gif" align=absmiddle><!--{ / }--></div></td>
+
+	<div id="review-title">
+		<h2>상품문의&nbsp;({=qna_count})</h2>
+		<div>
+			<button class="button-big-wide button-red" onclick="popup_register( 'add_review', '{_goodsno}' )">상품문의 작성</button>
+		</div>
+		<div class="dot-line"></div>
+		
+	</div>
+	
+	<!--{ @ _loop }-->
+	<div>
+		<table width="100%" cellpadding="0" cellspacing="0" style="border-bottom-style:solid;border-bottom-color:#E6E6E6;border-bottom-width:1;cursor:pointer;">
+		<tr height="25" onmouseover="this.style.background='#F7F7F7'" onmouseout="this.style.background=''" onclick="view_content('{.sno}');">
+			<!-- <td width="50" align="center">{.idx}</td> -->
+			<!--{ ? .type == 'Q' }-->
+			<td style="padding-left:0px"><div style="background-image: url(../img/common/ico_q.gif); background-repeat:no-repeat;background-position:left 3px;padding:3px 0px 0px 20px;">{.subject}<!--{ ? .secretIcon }-->&nbsp;<img src="../img/common/icn_secret.gif" align=absmiddle><!--{ / }--></div></td>
+			<!--{ : }-->
+			<td style="padding-left:5px"><div style="background-image: url(../img/common/ico_a.gif); background-repeat:no-repeat;background-position:left 3px;padding:3px 0px 0px 27px;"> {.subject}<!--{ ? .secretIcon }-->&nbsp;<img src="../img/common/icn_secret.gif" align=absmiddle><!--{ / }--></div></td>
+			<!--{ / }-->
+			<td width="150">{ ? .name }{.name}{ : .m_name }{.m_name}{ : }{.m_id}{ / }</td>
+			<td width="80">{=substr(.regdt,0,10)}</td>
+		</tr>
+		</table>
+	</div>
+	<div id="content_id_{.sno}" style="display:none"></div>
 	<!--{ / }-->
-	<td width="80">{ ? .name }{.name}{ : .m_name }{.m_name}{ : }{.m_id}{ / }</td>
-	<td width="80">{=substr(.regdt,0,10)}</td>
-</tr>
-</table>
-</div>
-<div id="content_id_{.sno}" style="display:none"></div>
-<!--{ / }-->
-
-<div style="float:right;padding:10px 5px">
-<a href="./goods_qna.php" target="_parent"><img src="../img/common/info_btn_totalview.gif"></a>
-<a href="javascript:;" onclick="popup_register( 'add_qna', '{_goodsno}' )"><img src="../img/common/btn_qna.gif"></a>
-</div>
-
-<div style="clear:both;text-align:center;padding-bottom:15px;">{pg->page['navi']}</div>
+    
+    <!-- 
+	<div style="float:right;padding:10px 5px">
+		<a href="./goods_qna.php" target="_parent"><img src="../img/common/info_btn_totalview.gif"></a>
+		<a href="javascript:;" onclick="popup_register( 'add_qna', '{_goodsno}' )"><img src="../img/common/btn_qna.gif"></a>
+	</div>
+ -->
+	<div style="clear:both;text-align:center;padding-top:10px; padding-bottom:15px;">{pg->page['navi']}</div>
 </div>
 </body>
 </html>
+

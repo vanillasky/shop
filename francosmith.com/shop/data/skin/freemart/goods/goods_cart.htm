@@ -122,44 +122,46 @@ var nsGodo_CartAction = function() {
 }();
 </script>
 
-<!-- 상단이미지 || 현재위치 -->
-<TABLE width=100% cellpadding=0 cellspacing=0 border=0 style="margin:15px 0 0 20px;">
-
-<tr>
-<td class="page_title">Your Shopping Cart</td>
-</tr>
-</TABLE>
-
-
-<div class="indiv"><!-- Start indiv -->
-<!--{ ? use_todayshop_cart == 'y'}-->
-<a href="../goods/goods_cart.php"><img src="../img/common/btn_basket_shopping.gif"></a>
-<a href="../goods/goods_cart.php?cart_type=todayshop"><img src="../img/common/btn_basket_today.gif"></a>
-<!--{ / }-->
-
-<form name=frmCart method=post>
-<input type=hidden name=mode value=modItem>
-<br>
-{=include_file("proc/orderitem.htm")}
-</form>
-
-<br>
-<TABLE width=100% cellpadding=0 cellspacing=0 border=0>
-<tr>
-<td align=center>
-<!--{ ? count(cart->item) }-->
-	<a href="javascript:void(0);" onClick="nsGodo_CartAction.del();return false;" onFocus="blur()"><img src="../img/common/btn_check_delete.gif" border=0></a>&nbsp;
-	<a href="javascript:void(0);" onClick="nsGodo_CartAction.order();return false;" onFocus="blur()"><img src="../img/common/btn_check_order.gif" border=0></a>&nbsp;
-	<a href="javascript:void(0);" onClick="nsGodo_CartAction.wishList();return false;" onFocus="blur()"><img src="../img/common/btn_check_wslist.gif" border=0></a>&nbsp;
-<!--{ / }-->
-<a href="javascript:history.back();"onFocus="blur()"><img src="../img/common/btn_back2.gif" border=0></a>&nbsp;
-<a href="goods_cart.php?mode=empty" onFocus="blur()"><img src="../img/common/btn_empty2.gif" border=0></a>&nbsp;
-<a href="../index.php" onFocus="blur()"><img src="../img/common/btn_continue2.gif" border=0></a></td>
-</tr>
-</TABLE>
-<div align="center">{naverCheckout}</div>
-<div align="center">{auctionIpayBtn}</div>
-
-</div><!-- End indiv -->
-
+<div class="page-wrapper">
+	<div class="page_title_div">
+		<div class="page_title" >Your Shopping Cart</div>
+		<div class="page_path" ><a href="/shop/">HOME</a> &gt; <a href="/shop/mypage/mypage.php">마이페이지</a> &gt; <span class='bold'>장바구니</span></div>
+	</div>
+	<div class="page_title_line"  style="clear:both;"></div>
+	
+	<div class="indiv"><!-- Start indiv -->
+		<!--{ ? use_todayshop_cart == 'y'}-->
+			<a href="../goods/goods_cart.php"><img src="../img/common/btn_basket_shopping.gif"></a>
+			<a href="../goods/goods_cart.php?cart_type=todayshop"><img src="../img/common/btn_basket_today.gif"></a>
+		<!--{ / }-->
+	
+		<form name=frmCart method=post>
+			<input type=hidden name=mode value=modItem>
+		<br>
+		{=include_file("proc/orderitem.htm")}
+		</form>
+	
+		<br>
+	
+		<TABLE width=100% cellpadding=0 cellspacing=0 border=0>
+		<tr>
+			<td align=center>
+			<!--{ ? count(cart->item) }-->
+				<a href="javascript:void(0);" onClick="nsGodo_CartAction.del();return false;" onFocus="blur()"><img src="../img/common/btn_check_delete.gif" border=0></a>&nbsp;
+				<a href="javascript:void(0);" onClick="nsGodo_CartAction.order();return false;" onFocus="blur()"><img src="../img/common/btn_check_order.gif" border=0></a>&nbsp;
+				<a href="javascript:void(0);" onClick="nsGodo_CartAction.wishList();return false;" onFocus="blur()"><img src="../img/common/btn_check_wslist.gif" border=0></a>&nbsp;
+			<!--{ / }-->
+				<a href="javascript:history.back();"onFocus="blur()"><img src="../img/common/btn_back2.gif" border=0></a>&nbsp;
+				<a href="goods_cart.php?mode=empty" onFocus="blur()"><img src="../img/common/btn_empty2.gif" border=0></a>&nbsp;
+				<a href="../index.php" onFocus="blur()"><img src="../img/common/btn_continue2.gif" border=0></a></td>
+		</tr>
+		</TABLE>
+	
+		<div align="center">{naverCheckout}</div>
+		<div align="center">{auctionIpayBtn}</div>
+	
+	</div><!-- End indiv -->
+	
+	<div style="width:100%; padding-top:30px;"></div>
+</div>
 { # footer }

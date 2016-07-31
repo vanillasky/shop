@@ -1,14 +1,14 @@
 {*** 갤러리형 | goods/goods_list.php ***}
 <!--{ ? !id }--><? {id} = "es_".md5(crypt('')); ?><!--{ / }-->
 <!-- 상품 리스트 -->
-<script>
+<script type="text/javascript">
 function fnPreviewGoods_{id}(goodsno) {
 	//popup('../goods/goods_view.php?goodsno='+goodsno+'&preview=y','800','450');
-	wopen('../goods/goods_view.php?goodsno='+goodsno+'&preview=y', '800', '550', "QuickView");
+	wopen('../goods/goods_view.php?goodsno='+goodsno+'&preview=y', '860', '700', "QuickView");
 }
 </script>
 
-<table id="goods-grid" width=100% cellpadding=0 cellspacing="0" >
+<table id="goods-grid" width=100% cellpadding=0 cellspacing="0">
 <tr>
 	<!--{ @ loop }-->
 	<!--{ ? .index_ && .index_%cols==0 }--></tr><tr><!--{ / }-->
@@ -25,6 +25,8 @@ function fnPreviewGoods_{id}(goodsno) {
 		<div class="goods_dp_tag"><a href="{.goods_view_url}">{=goodsimg(.img_s,size, 'class="'+ .css_selector +' goods-circle-icon"')}<img src="../../img/icon/reserve.png" class="dp_tag-right" ></a></div>
 	<?php elseif(strpos({.icon}, 'good_icon_new'))  : ?>
 		<div class="goods_dp_tag"><a href="{.goods_view_url}">{=goodsimg(.img_s,size, 'class="'+ .css_selector +' goods-circle-icon"')}<img src="../../img/icon/new-circle-icon.png" class="dp_tag-right" ></a></div>
+	<?php elseif(strpos({.icon}, 'good_icon_event'))  : ?>
+		<div class="goods_dp_tag"><a href="{.goods_view_url}">{=goodsimg(.img_s,size, 'class="'+ .css_selector +' goods-circle-icon"')}<img src="../../img/icon/event.png" class="dp_tag-right" ></a></div>	
 	<?php else: ?>
 		<div><a href="{.goods_view_url}">{=goodsimg(.img_s,size,'class="'+ .css_selector +'"')}</a></div>
 	<?php endif; ?>	

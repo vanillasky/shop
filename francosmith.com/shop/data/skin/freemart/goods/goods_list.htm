@@ -4,7 +4,7 @@
 <!-- 상단 HTML -->
 <div style="padding:5px 0 10px 0">{=stripslashes(_lstcfg.body)}</div>
 
-
+<div class="page-wrapper">
 <div><!-- Start indiv -->
 
 <form name=frmList>
@@ -15,27 +15,14 @@
 	<!-- 상단 카테고리 메뉴 -->
 	<table width=100% border=0 cellpadding=0 cellspacing=0>
 	<tr>
-	<td style="padding:5px 0 0 0;">
+	<td style="padding:5px 0 0 0; text-align:left;">
 		<img src="/shop/data/images/web/icon/arrow-r.png" align="absmiddle">&nbsp;&nbsp;<b>{=currPosition(_category)}</b><span id="prod_cnt">[Total:{pg->recode['total']}]</span></td>
 	</tr>
 	<tr>
 	</table>
-
-	<div id="cate_prod" >
-		<table cellpadding="0" cellspacing="0">
-		<tr>
-			<td style="padding-top:5px;">
-	<!--{ @ dataSubCategory( _category, true ) }-->
-	<!--{ ? _category == .category }--><b><!--{ / }-->
-	<a href="?category={.category}">{.catnm}<font color=#777777>({.gcnt+0})</font></a>
-	<!--{ ? _category == .category }--></b><!--{ / }-->
-	<!--{ ? .index_!=.size_-1 }--> <font color=#cccccc>&nbsp;|&nbsp;</font> <!--{ / }-->
-	<!--{ / }-->
-			</td>
-		</tr>
-			
-		</table>
-	</div>
+		
+	<div style="padding-top:15px"></div>	
+	
 
 <!-- 추천상품 -->
 <!--{ = this->assign( 'loop', dataDisplayGoods( _category , lstcfg.rimg, lstcfg.rpage_num ) ) // 데이타 호출 }-->
@@ -54,6 +41,10 @@
 <!--{ / }-->
 <!--{ = include_file( "goods/list/" + lstcfg.rtpl + ".htm" ) }-->
 
+
+	
+<!-- capture_start("list_top") -->
+<div class="sort_area_top_line"></div>
 <div class="sort_area">
 	<ul id="sort_ul" class="sort_list">
 		<li class="" id="sort_goods_price"><a href="javascript:sort('price')"><span></span>낮은 가격순</a></li>
@@ -70,10 +61,8 @@
 	<span>Items per page:</span>
 	<select onchange="if(typeof(document.sSearch) != 'undefined') { _ID('page_num').value=this.value; document.sSearch.submit() } else { this.form.page_num.value=this.value;this.form.submit() }" style="font:8pt 돋움"><!--{ @ lstcfg.page_num }--><option value="{.value_}" {_selected.page_num[.value_]}>{.value_}<!--{ / }--></select>		
 </div>
-	
-<!-- capture_start("list_top") -->
-
 <!-- capture_end ("list_top") -->
+
 <table width=100% border=0 cellpadding=0 cellspacing=0>
 <tr><td height=1 bgcolor=#DDDDDD></td></tr>
 <tr>
@@ -108,27 +97,38 @@
 </form>
 </div><!-- End indiv -->
 
-
+</div>
 <script>
 function act(target,goodsno,opt1,opt2)
 {
-var form = document.frmCharge;
+	var form = document.frmCharge;
 
-form.mode.value = "addItem";
-form.goodsno.value = goodsno;
+	form.mode.value = "addItem";
+	form.goodsno.value = goodsno;
 
-if(opt2) opt1 += opt2;
-document.getElementById("opt").value=opt1;
+	if(opt2) opt1 += opt2;
+	document.getElementById("opt").value=opt1;
 
-form.action = target + ".php";
-form.submit();
+	form.action = target + ".php";
+	form.submit();
 }
+
 function sort(sort)
 {
-var fm = document.frmList;
-if(typeof(document.sSearch) != "undefined") fm = document.sSearch;
-fm.sort.value = sort;
-fm.submit();
+	var fm = document.frmList;
+	if(typeof(document.sSearch) != "undefined") fm = document.sSearch;
+	fm.sort.value = sort;
+	
+	
+	if (fm.rMinPrice) {
+		fm.ssMinPrice.value = fm.rMinPrice.value.replace(",", "");
+	}
+	
+	if (fm.ssMaxPrice) {
+		fm.ssMaxPrice.value = fm.rMaxPrice.value.replace(",", "");;
+	}
+	
+	fm.submit();
 }
 function sort_chk(sort)
 {

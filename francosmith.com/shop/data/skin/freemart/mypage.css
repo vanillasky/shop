@@ -13,7 +13,7 @@
 	.mplist .ordtitle:after { content:""; display:block; clear:both; margin-bottom:15px; }
 	.mplist .ordment { float:left; }
 	.mplist .ordlink { float:right; }
-	.mplist table.ordlisttbl { width:98%; border-top:2px solid #303030; }
+	.mplist table.ordlisttbl { width:98%; border-top:2px solid #303030;}
 	.mplist table.ordlisttbl caption { display:none; }
 	.mplist table.ordlisttbl th { background:#f0f0f0; color:#363636; height:31px; border-left:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; }
 	.mplist table.ordlisttbl th:first-child { background:#f0f0f0; color:#363636; height:31px; border-left:none; }
@@ -41,3 +41,98 @@
 	.gsnm { max-width:100px; max-height:20px; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; }
 	.nodata { text-align:center; }
 	.nodata_div { height:220px; border-top:2px solid #303030; border-bottom:1px solid #e5e5e5; text-align:center; line-height:220px; color:#555; font-size:12px; }
+	
+/** 마이페이지 */
+#mypage_box {width:180px; border:0;}
+#mypage_box td {padding:3px 0 3px 3px}
+#mypage_box .number { color:#ff4810 }
+#mypage_box { font-size:12px; }
+	
+#mypage-menu { text-align:left; }	
+#mypage-menu ul { 
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top:5px;
+    
+}
+#mypage-menu li { padding:5px 0 5px 15px; }
+
+.mypage-separator { width:90%; border-bottom:solid 1px #ededed; font-size:0px; margin:0 auto; text-align:center; }
+#mypage-wrapper {
+	width:790px;
+	margin:0 auto;
+}
+
+.mypage-board-table {
+	width:100%;
+	border:none;
+	border-collapse: collapse;
+}
+
+.mypage-board-table td {
+	padding:5px;
+}
+
+.mypage-board-title {
+	font-weight:bold;
+	font-size:12px;
+	height:30px;
+	background-color: #F0F0F0;
+	border-top:2px solid #303030;
+}
+
+.mypage-board-content {
+	width:100%;
+	cellpadding:3;
+	border-bottom:1px solid #E6E6E6;
+	cursor:pointer;
+	border-collapse: collapse;
+}
+
+.mypage-board-content td {
+	padding:5px;
+}
+
+
+.mypage-board-content .ans {
+	padding-left:10px;
+}
+
+.mypage-txt-wrapper {
+	display:none;
+	padding-top:12px; 
+	text-align:left;
+	border-bottom:1px solid #E6E6E6;
+}
+
+.mypage-txt {
+	width:80%;
+	margin-left:120px;
+}
+
+
+.mypage-txt-full {
+	width:98%;
+	margin:0 auto;
+}
+
+.mypage-txt .order-no {
+	width:100%;
+	padding:5px 5px;
+}
+
+.mypage-txt .description {
+	width:100%;
+	padding:5px 5px;
+}
+
+.mypage-prod-img {
+	width:100%;
+	padding-bottom:20px;
+}
+
+.mypage-prod-img span {
+	text-align:left;
+	padding-left:1.2em;	
+}

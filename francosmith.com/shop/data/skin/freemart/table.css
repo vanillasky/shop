@@ -250,6 +250,7 @@
 	background-color: #f4f2e6;
 	vertical-align:top;
 	padding-left:1em;
+	text-align:left;
 
 }
 
@@ -395,3 +396,41 @@
 	color: #339;
 	background: #eff2ff;
 }
+
+table.fullwidth {
+	width:100%;
+	table-layout:fixed;
+}
+
+.outline { border-collapse: collapse; border:1px solid #cccccc;}
+.specification-table { border-collapse: collapse; font-family:Verdana, 돋움, Geneva, sans-serif; margin-bottom:10px; }
+.specification-table tr.table-row { border-bottom:1px solid #ededed }
+.specification-table .label { width:15%; min-width:120px; text-align:left; font-weight:bold; vertical-align:middle; padding:7px 30px 7px 5px; white-space: nowrap;}
+.specification-table .label-narrow { width:11%; min-width:100px; text-align:left; font-weight:bold; vertical-align:middle; padding:7px 30px 7px 5px; white-space: nowrap;}
+.specification-table .data { text-align:left; font-weight:normal; vertical-align:middle; padding:7px 30px 7px 5px; }
+.specification-table .data-indent { text-align:left; font-weight:normal; vertical-align:middle; padding:7px 30px 7px 20px; }
+
+.specification-table tr.image { height:125px; }
+.specification-table .label-img { width:20%; min-width:150px; text-align:left;}
+.specification-table .label-img-data { text-align:left; font-weight:normal; vertical-align:top; padding:7px 30px 7px 5px; }
+.specification-table .label-img-data span { padding-top:10px; line-height:18px;}
+
+.specification-table .bline { border-right:1px solid #ccc; }
+
+.specification-table tr:hover td
+{
+	background: #ededed;
+}
+
+
+.bg-water { background:url(http://francosmith.godohosting.com/web/logo_water.jpg) no-repeat 50% 40%; }
+
+.specification-table tr.subject, tr.even { background-color:#ededed;}
+
+.grid-table { border-bottom: #333333 2px solid; border-left: #333333 2px solid; border-top: #333333 2px solid; border-right: #333333 2px solid; 
+	font-family:Verdana, 돋움, Geneva, sans-serif; margin-bottom:10px;  
+}
+
+.grid-table .label { text-align:center; padding:5px 0 5px 0; border-collapse: collapse; border:1px solid #cccccc; background-color:#ededed; }
+.grid-table td { text-align:left; padding:5px 0 5px 0; border-collapse: collapse; border:1px solid #cccccc;  }
+

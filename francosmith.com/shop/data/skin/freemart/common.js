@@ -1333,7 +1333,7 @@ var divpop_id;
 	}
  }
 
- function Moveing_stop(){
+function Moveing_stop(){
 	move_type =  false;
 }
 
@@ -1350,6 +1350,7 @@ document.onmouseup = function() {
 		try { sSearch.submit(); } catch(e) {}
 	}
 }
+
 /*** 이동레이어 관련 : end ***/
 
 /*** 이미지 디테일뷰 2010.11.09 ***/
@@ -1934,6 +1935,8 @@ function bgToggle(objID, bg1, bg2) {
 
 		if( appname == "M" ) target_Element = event.srcElement; //익스
 		else { //익스 외
+//			console.debug("1) event.which =>" + event.which);
+			
 			if (event.which !=1) return false;
 			else{
 				move_type = true;
@@ -1941,21 +1944,28 @@ function bgToggle(objID, bg1, bg2) {
 			}
 		}
 
+//		console.debug("2) event.which =>" + event.which);
+		
 		move_type = true;
 		Move_x = event.clientX;
 		tempPixelLeft = target_Element.style.pixelLeft;
+		
 		if( appname == "M" ) target_Element.onmousemove = ssMoveing;
 		else document.onmousemove = ssMoveing;
 	}
+	
 	function ssMoveing(e) {
+		
 		var event = e || window.event;
 
+//		console.debug("3) move_type =>" + move_type);
+		
 		if(move_type == true){
 			var Nowx = event.clientX - Move_x;
 			var targetName = document.getElementById(divpop_id);
 			var minOPrc = _ID('ssOriMinPrc');	// 최소값 기본설정
 			var maxOPrc = _ID('ssOriMaxPrc');	// 최대값 기본설정
-
+			
 			tempX = tempPixelLeft + event.clientX - Move_x;
 			ssSubmitCtrl = targetName.id;
 
@@ -1969,7 +1979,7 @@ function bgToggle(objID, bg1, bg2) {
 				tempX = (tempX > 156) ? 156 : tempX;
 				targetName.style.pixelLeft = tempX;
 			}
-
+			
 			_ID('ssMinPrice').value = Math.round(Math.round((_ID('minArrow').style.pixelLeft / 156) * 100) / 100 * ssPriceTerm) + (minOPrc.value * 1);
 			_ID('ssMaxPrice').value = Math.round(Math.round((_ID('maxArrow').style.pixelLeft / 156) * 100) / 100 * ssPriceTerm) + (minOPrc.value * 1);
 
@@ -2048,7 +2058,7 @@ function bgToggle(objID, bg1, bg2) {
 		for(i = 0; i < targetOpt.length; i++) targetOpt[i].checked = false;
 		for(i = 0; i < checkedOpt.length; i++) if(checkedOpt[i]) _ID(checkedOpt[i]).checked = true;
 
-		try { sSearch.submit() } catch (e) { }
+		submitSmartSearch(document.getElementById("sSearch"));
 	}
 
 	// 스마트 검색 : [더보기 -> 취소] 선택된 임시 옵션들을 제거
@@ -2087,7 +2097,8 @@ function bgToggle(objID, bg1, bg2) {
 
 		if(tempColor.value.indexOf(targetColor) == -1) tempColor.value = tempColor.value + targetColor;
 		if(tempColor.value) color2Tag('selectedColor');
-		try { sSearch.submit() } catch (e) { }
+		submitSmartSearch(document.getElementById("sSearch"), true);
+		
 	}
 
 	// 스마트 검색 : 선택된 색상을 hidden에 저장하고 태그로 전환해서 출력
@@ -2118,8 +2129,27 @@ function bgToggle(objID, bg1, bg2) {
 		var colorTextObj = _ID("ssColor");
 		colorTextObj.value = colorTextObj.value.replace(delColor, "");
 		color2Tag(targetID);
-		try { sSearch.submit() } catch (e) { }
+		submitSmartSearch(document.getElementById("sSearch"), true);
 	}
+	
+	function submitSmartSearch(fm, useOriginPrice) {
+		var minPrice = fm.rMinPrice.value.replace(",", "");
+		var maxPrice = fm.rMaxPrice.value.replace(",", "");
+		
+		if (useOriginPrice) {
+			minPrice = fm.ssOriMinPrc.value;
+			maxPrice = fm.ssOriMaxPrc.value;
+		} else {
+			minPrice = isNaN(minPrice) ? 0 : minPrice;
+			maxPrice = isNaN(maxPrice) ? 1000000 :maxPrice ;
+		}
+		
+		fm.ssMinPrice.value = minPrice;
+		fm.ssMaxPrice.value = maxPrice;
+		
+		fm.submit();
+	}
+	
 /* 스마트 가격검색 부분 맺음 */
 
 /*** 장바구니 레이어 띄우기 Ajax통신 ***/
@@ -2315,3 +2345,51 @@ function toggleBG(obj, mover) {
 }
 
 										   
+//Closure
+(function() {
+  /**
+   * Decimal adjustment of a number.
+   *
+   * @param {String}  type  The type of adjustment.
+   * @param {Number}  value The number.
+   * @param {Integer} exp   The exponent (the 10 logarithm of the adjustment base).
+   * @returns {Number} The adjusted value.
+   */
+  function decimalAdjust(type, value, exp) {
+    // If the exp is undefined or zero...
+    if (typeof exp === 'undefined' || +exp === 0) {
+      return Math[type](value);
+    }
+    value = +value;
+    exp = +exp;
+    // If the value is not a number or the exp is not an integer...
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
+      return NaN;
+    }
+    // Shift
+    value = value.toString().split('e');
+    value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+    // Shift back
+    value = value.toString().split('e');
+    return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+  }
+
+  // Decimal round
+  if (!Math.round10) {
+    Math.round10 = function(value, exp) {
+      return decimalAdjust('round', value, exp);
+    };
+  }
+  // Decimal floor
+  if (!Math.floor10) {
+    Math.floor10 = function(value, exp) {
+      return decimalAdjust('floor', value, exp);
+    };
+  }
+  // Decimal ceil
+  if (!Math.ceil10) {
+    Math.ceil10 = function(value, exp) {
+      return decimalAdjust('ceil', value, exp);
+    };
+  }
+})();
